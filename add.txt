@@ -1,0 +1,43 @@
+<!-- $host="localhost:3307";
+    $user="root";
+    $password="";
+    $db="miniproject2";
+    session_start();
+    include("connection.php");
+	include("functions.php");
+
+    $user_data = check_login($con);
+    
+    $conn = mysqli_connect($host,$user,$password,$db);
+    
+    
+    if(isset($_POST['submit'])){
+    
+        
+        
+            $id = $_SESSION["user_id"];
+            $data = $_SESSION["user_id"];
+            $query = mysqli_query($conn,"select * from users where user_id = '$data'");
+            $row = mysqli_fetch_array($query);
+            $id = $row["id"];
+	        
+    
+            $p_name = $_REQUEST['p_name'];
+            $symptoms = $_REQUEST['symptoms'];
+            $p_age = $_REQUEST['p_age'];
+            $p_gender = $_REQUEST['p_gender'];
+            $doc_id = $_REQUEST['doc_id']; 
+    
+            mysqli_query( $conn, "insert into patients (p_name,symptoms,p_gender,p_age,doc_id,user_id) values ('$p_name','$symptoms','$p_gender','$p_age''$doc_id',$id)");
+    
+            // $run = mysqli_query($conn,$query) or die (mysqli_error($conn));
+    
+            // if($run){
+            //     header('location:notes.html');
+            // }
+            // else {
+            //     echo "form not submit";
+            // }
+        
+    
+    } -->

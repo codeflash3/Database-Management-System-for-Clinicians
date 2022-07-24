@@ -1,0 +1,8 @@
+.header{
+    margin-top: 3%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.btn-group .btn btn-sm btn-outline-secondary .deco{
+    text-decoration: none;
+}
